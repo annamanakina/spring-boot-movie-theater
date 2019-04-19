@@ -7,10 +7,6 @@ import org.springframework.lang.Nullable;
 
 import java.time.LocalDateTime;
 
-/**
- * @author Yuriy_Tkach
- */
-
 public interface DiscountService {
 
     /**

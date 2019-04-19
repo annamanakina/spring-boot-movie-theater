@@ -7,10 +7,6 @@ import lombok.NonNull;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-/**
- * @author Yuriy_Tkach
- */
-
 public interface BookingService {
     /**
      * Getting price when buying all supplied seats for particular event
