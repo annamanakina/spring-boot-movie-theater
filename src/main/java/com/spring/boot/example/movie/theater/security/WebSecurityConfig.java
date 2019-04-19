@@ -2,6 +2,7 @@ package com.spring.boot.example.movie.theater.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -12,6 +13,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 @EnableWebSecurity
+@Order(1000)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -30,6 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     //todo instead of this user login & password should be stored in DB
+    //todo read what how we can changed it
     @Bean
     @Override
     public UserDetailsService userDetailsService() {

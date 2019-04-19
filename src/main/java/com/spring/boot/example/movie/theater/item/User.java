@@ -9,14 +9,12 @@ import java.time.LocalDate;
 import java.util.NavigableSet;
 import java.util.TreeSet;
 
-import javax.persistence.Entity;
-
 @Getter
 @Setter
 @EqualsAndHashCode
 //https://www.youtube.com/watch?v=WDlifgLS8iQ
-@Entity // This tells Hibernate to make a table out of this class
-public class User {   //extends Entity{
+
+public class User extends Entity{
     private LocalDate birthday;
     private String firstName;
     private String lastName;
@@ -31,7 +29,7 @@ public class User {   //extends Entity{
     //LocalDate birthday,
     public User(int id,  String firstName, String lastName, String email,
                 String password, UserRole role) {
-        //super(id);
+        super(id);
         //this.birthday = birthday;
         this.firstName = firstName;
         this.lastName = lastName;
